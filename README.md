@@ -42,6 +42,7 @@ This project has allowed me to enhance my skills in web development, **Python** 
 First, create a new directory for your project and navigate to it in your terminal or command prompt:
 
 mkdir sms_project
+
 cd sms_project
 
 ### Now, create a virtual environment:
