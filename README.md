@@ -1,5 +1,3 @@
-# Student-Management-System
-
 # 🚀 Student Management System (SMS) 🚀
 
 ## Overview
