@@ -41,6 +41,10 @@ This project has allowed me to enhance my skills in web development, **Python** 
 ### 1. Create a Virtual Environment
 First, create a new directory for your project and navigate to it in your terminal or command prompt:
 
-```bash
 mkdir sms_project
 cd sms_project
+
+### Now, create a virtual environment:
+python -m venv venv
+
+
