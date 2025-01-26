@@ -48,6 +48,60 @@ cd sms_project
 
 
 ### Now, create a virtual environment:
+```
 python -m venv venv
+```
+
+### 2. Activate the Virtual Environment
+On Windows:
+```
+venv\Scripts\activate
+```
+### 3. Install the Required Packages
+Inside the virtual environment, install Flask and MySQL connector:
+```
+pip install flask mysql-connector-python pandas
+```
+
+### 4. Create the Project Structure
+Inside the sms_project folder, create the following structure:
+```
+sms_project/
+├── venv/             # Virtual Environment
+├── app.py            # Main Flask app
+└── templates/        # HTML Templates folder
+    ├── homepage.html
+    ├── register.html
+    ├── login.html
+    ├── student_register.html
+    ├── student_list.html
+    ├── editstudent.html
+    ├── delete_confirmation.html
+    └── nav.html      # Navigation bar template
+```
+
+### 5. Add the Code Files
+- Copy the Flask app code (app.py) and your HTML templates into the appropriate files and directories.
+- In app.py, ensure to set up the Flask routes, database connections, and form handling (refer to the previously shared app.py code).
+
+### 6. Set Up MySQL Database
+- Create a new MySQL database called sms.
+- Set up the necessary tables for signup and students.
+
+### 7. Run the Flask Application
+In the project folder, run the following command:
+```
+python app.py
+```
+Flask will start the development server, and you will see an output like this:
+```
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+### 8. Access the Application in Your Browser
+Open a web browser and go to:
+```
+http://127.0.0.1:5000/
+```
+
 
 
