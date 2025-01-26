@@ -1,0 +1,29 @@
+{% extends "homepage.html" %}
+<!-- This extends the 'homepage.html' template, which means the content of this page will be inserted into the body of
+  'homepage.html' where the block 'content' is defined. -->
+
+{% block content %}
+<!-- The block content defines the section of the page that will be rendered and replaces the content in the 'homepage.html'. -->
+
+<h2>Confirm Deletion</h2>
+<!-- This is a heading that indicates the user is on a confirmation page for deleting a student record. -->
+
+<p>Are you sure you want to delete the students <strong>{{student[1]}}</strong></p>
+<!-- This paragraph asks for confirmation, showing the student's name (accessed via {{student[1]}}). 
+The student's name is highlighted in bold. -->
+<!-- Note: The index '1' assumes that 'student' is a tuple or list, where the second element (index 1) is the student's name. -->
+
+<form method="POST">
+<!-- This starts a form that will send a POST request upon submission, confirming the deletion of the student record. -->
+
+    <button>Yes, Delete</button>
+    <!-- This button submits the form and confirms the deletion of the student. -->
+
+    <a href="{{url_for('student_list')}}">Cancel</a>
+    <!-- This anchor tag links to the student list page and allows the user to cancel the deletion. The 'url_for' 
+     generates the URL for the 'student_list' route. -->
+</form>
+
+{% endblock %}
+<!-- This ends the 'content' block, indicating that all the content inside this block will be injected into the template that is 
+ extending 'homepage.html'. -->

@@ -1,0 +1,20 @@
+{% extends 'nav.html' %}
+<!-- This line indicates that this template extends the 'nav.html' template. It will inherit the structure of nav.html, 
+ including the navigation bar. -->
+
+{% block content %}
+<!-- This block is where the content specific to this page will be injected, overriding the 'content' block from the 
+ parent template (nav.html). -->
+
+   <!-- Image to be displayed on the page -->
+   <img width="99%" src="https://media.istockphoto.com/id/173379648/photo/lead-and-learn-written-on-red-and-black-jigsaw-pieces.jpg?s=1024x1024&w=is&k=20&c=SqbOQdJ4Q2h-_BZymeLzHRO9AbvGEjblQE1A2PazD5I=" alt="">
+   <!-- This is an image tag with a width of 99% of its container. The source URL is a link to an image. 
+    The alt attribute provides an alternative text in case the image cannot be displayed. -->
+
+   <!-- Bootstrap Bundle JS script for enabling JavaScript functionality -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <!-- This script link includes Bootstrap's bundled JavaScript file. The integrity and crossorigin attributes are used for 
+    security and cross-origin resource sharing. -->
+   
+{% endblock %}
+<!-- End of the content block. This marks the end of the content specific to this page. -->

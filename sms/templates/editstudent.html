@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Defines the document type and the language of the document as English. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document (UTF-8) to ensure proper handling of characters. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and adjusts according to the device’s width (essential for mobile optimization). -->
+
+    <title>Document</title>
+    <!-- Sets the title of the web page, which appears in the browser tab. -->
+
+    {% with messages = get_flashed_messages() %}
+    <!-- The 'with' statement is used to assign flashed messages to a variable 'messages' that are passed to the template. -->
+    {% if messages %}
+    <!-- Checks if there are any flashed messages. -->
+        <ul class=flashes>
+        <!-- Creates an unordered list to display the messages. -->
+        {% for message in messages %}
+        <!-- Loops through each flashed message. -->
+            <li>{{ message }}</li>
+            <!-- Displays each message as a list item. -->
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <!-- Ends the 'with' block for flashed messages. -->
+
+    {% block body %}{% endblock %}
+    <!-- Defines a content block for the page where specific content will be inserted (from child templates). -->
+</head>
+
+<body>
+    <form method="POST" action="">
+    <!-- Starts a form with the POST method for submitting data to the same URL (the action is empty). -->
+        <label for="">NAME :</label>
+        <!-- Label for the name input field. -->
+        <input type="text" name="name" value="{{student.name}}" id="">
+        <!-- Input field for 'name' that is pre-filled with the current student's name using the 'student.name' variable. -->
+
+        <label for="">ADDRESS :</label>
+        <!-- Label for the address input field. -->
+        <input type="text" name="Address" value="{{student.address}}" id="">
+        <!-- Input field for 'Address' that is pre-filled with the student's address using 'student.address'. -->
+
+        <label for="">AGE :</label>
+        <!-- Label for the age input field. -->
+        <input type="text" name="age" value="{{student.age}}" id="">
+        <!-- Input field for 'age' that is pre-filled with the student's age using 'student.age'. -->
+
+        <label for="">EMAIL :</label>
+        <!-- Label for the email input field. -->
+        <input type="email" name="email" value="{{student.email}}" id="">
+        <!-- Input field for 'email' that is pre-filled with the student's email using 'student.email'. -->
+
+        <button>submit</button>   
+        <!-- A submit button to send the form data to the server. -->
+    </form>
+</body>
+</html>
