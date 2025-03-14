@@ -1,0 +1,20 @@
+{# Delete_confirmation.html: Confirmation page for deleting a student #}
+{% extends "homepage.html" %} {# Inherit layout from homepage.html (which itself extends nav.html) #}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Heading for deletion confirmation -->
+    <h2>Confirm Deletion</h2>
+    
+    <!-- Message asking the user to confirm deletion; displays student name in bold -->
+    <p>Are you sure you want to delete the student <strong>{{ student.name }}</strong>?</p>
+    
+    <!-- Form to confirm deletion; submits via POST method -->
+    <form method="POST">
+        <!-- Button to confirm deletion -->
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <!-- Link to cancel deletion and return to student list -->
+        <a href="{{ url_for('student_list') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

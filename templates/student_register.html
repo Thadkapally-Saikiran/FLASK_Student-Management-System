@@ -1,0 +1,35 @@
+{# student_register.html: Page for registering a new student #}
+{% extends "homepage.html" %} {# Extend homepage.html, which includes nav.html for consistent layout #}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Heading for student registration -->
+    <h2>Student Registration</h2>
+    
+    <!-- Form to input new student details, submitted via POST -->
+    <form method="POST" action="">
+        <!-- Input field for student name with rounded corners -->
+        <div class="mb-3">
+            <label for="name" class="form-label">NAME:</label>
+            <input type="text" name="name" class="form-control" id="name" style="border-radius: 15%;">
+        </div>
+        <!-- Input field for student address with rounded corners -->
+        <div class="mb-3">
+            <label for="address" class="form-label">ADDRESS:</label>
+            <input type="text" name="Address" class="form-control" id="address" style="border-radius: 15%;">
+        </div>
+        <!-- Input field for student age with rounded corners -->
+        <div class="mb-3">
+            <label for="age" class="form-label">AGE:</label>
+            <input type="text" name="age" class="form-control" id="age" style="border-radius: 15%;">
+        </div>
+        <!-- Input field for student email with rounded corners -->
+        <div class="mb-3">
+            <label for="email" class="form-label">EMAIL:</label>
+            <input type="email" name="email" class="form-control" id="email" style="border-radius: 15%;">
+        </div>
+        <!-- Submit button for student registration -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

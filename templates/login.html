@@ -1,0 +1,25 @@
+{# login.html: User login page #}
+{% extends 'nav.html' %} {# Extend nav.html to include navigation bar and flash messages #}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Heading for the login page -->
+    <h2>Login</h2>
+    
+    <!-- Login form using POST method -->
+    <form method="POST" action="">
+        <!-- Email input field -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" id="email">
+        </div>
+        <!-- Password input field -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+        <!-- Submit button for login -->
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+{% endblock %}

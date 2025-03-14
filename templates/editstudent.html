@@ -1,0 +1,35 @@
+{# editstudent.html: Page to edit an existing student's details #}
+{% extends 'nav.html' %} {# Extend nav.html to include consistent navigation and flash messages #}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Page heading -->
+    <h2>Edit Student</h2>
+    
+    <!-- Form to update student details, submitted using POST -->
+    <form method="POST" action="">
+        <!-- Input field for student's name -->
+        <div class="mb-3">
+            <label for="name" class="form-label">NAME:</label>
+            <input type="text" name="name" class="form-control" id="name" value="{{ student.name }}">
+        </div>
+        <!-- Input field for student's address -->
+        <div class="mb-3">
+            <label for="address" class="form-label">ADDRESS:</label>
+            <input type="text" name="Address" class="form-control" id="address" value="{{ student.address }}">
+        </div>
+        <!-- Input field for student's age -->
+        <div class="mb-3">
+            <label for="age" class="form-label">AGE:</label>
+            <input type="text" name="age" class="form-control" id="age" value="{{ student.age }}">
+        </div>
+        <!-- Input field for student's email -->
+        <div class="mb-3">
+            <label for="email" class="form-label">EMAIL:</label>
+            <input type="email" name="email" class="form-control" id="email" value="{{ student.email }}">
+        </div>
+        <!-- Submit button to update student information -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{# student_list.html: Page that displays a list of students #}
+{% extends 'nav.html' %} {# Extend nav.html for navigation and flash messages #}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Heading for the student list page -->
+    <h2>Student List</h2>
+    
+    <!-- Table to display student details -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <!-- Table header for each student attribute -->
+                <th>NAME</th>
+                <th>ADDRESS</th>
+                <th>AGE</th>
+                <th>EMAIL</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+        {# Loop through each student in the students list #}
+        {% for i in students %}
+            <tr>
+                <!-- Display student name -->
+                <td>{{ i.name }}</td>
+                <!-- Display student address -->
+                <td>{{ i.address }}</td>
+                <!-- Display student age -->
+                <td>{{ i.age }}</td>
+                <!-- Display student email -->
+                <td>{{ i.email }}</td>
+                <!-- Action buttons for editing and deleting a student -->
+                <td>
+                    <a href="{{ url_for('edit_student', id=i.id) }}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="{{ url_for('delete_student', id=i.id) }}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!-- Link to download the student list as an Excel file -->
+    <p>If you need an Excel Sheet Copy of this 
+        <a href="{{ url_for('download_excel') }}" class="btn btn-primary">Download File</a>
+    </p>
+</div>
+{% endblock %}
