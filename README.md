@@ -67,6 +67,7 @@ Inside the sms_project folder, create the following structure:
 sms_project/
 ├── venv/             # Virtual Environment
 ├── app.py            # Main Flask app
+├── database.sql      # Database schema and queries
 └── templates/        # HTML Templates folder
     ├── homepage.html
     ├── register.html
