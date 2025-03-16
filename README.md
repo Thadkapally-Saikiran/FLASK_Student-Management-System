@@ -1,5 +1,7 @@
 # 🚀 Student Management System (SMS) 🚀
 
+![](sms.png)
+
 ## Overview
 
 This is a **Student Management System (SMS)** built as part of my full-stack development training. The application is designed to manage student records with user authentication, allowing users to register, login, view, add, edit, and delete student data. The system uses **Flask** for the backend, **MySQL** for database management, and **Bootstrap** for the frontend styling.
